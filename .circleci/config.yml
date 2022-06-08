@@ -12,9 +12,9 @@ jobs:
           name: "echo hello world into a file"
           command: "echo Hello, World! > output.txt"
       - persist_to_workspace:
-          root: ~/
+          root: .
           paths:
-            -  /*
+            -  ./
 
 
   
@@ -26,7 +26,7 @@ jobs:
     steps:
       -  checkout
       - attach_workspace:
-          at: /
+          at: ./
       - run:
           name: "print out from file"
           command: "cat output.txt"
