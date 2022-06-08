@@ -29,7 +29,7 @@ jobs:
           at: ~/
       - run:
           name: "print out from file"
-          command: "cat output.txt"
+          command: cat ~/output.txt
 
 
 workflows:
